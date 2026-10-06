@@ -8,15 +8,16 @@ html,body{
     height: 100%;
 }
 body{
-    background:url(https://i.pinimg.com/736x/0c/13/17/0c131789faf76ba6e729fb169e9192f0.jpg);
+    background: url(https://i.pinimg.com/736x/a7/53/a4/a753a42198f6235fbe18d151e5a6fa18.jpg);
     background-size: cover;
+    background-position: center;
 }
 :root{
-    --x:200px;
-    --y:200px;
+    --x: 120px;
+    --y:180px;
 }
 .box{
-    width: 100%;
-    height: 100%;
-    background:radial-gradient(120px at var(--x) var(--y) ,rgba(255, 232, 232, 0.11),black);
+    width: 200px;
+    height: 200px;
+    background:radial-gradient(50px at var(--x) var(--y),white,black);
 }
