@@ -17,7 +17,7 @@ body{
     --y:180px;
 }
 .box{
-    width: 200px;
-    height: 200px;
-    background:radial-gradient(50px at var(--x) var(--y),white,black);
+    width: 100%;
+    height: 100%;
+    background:radial-gradient(200px at var(--x) var(--y),rgba(255, 255, 255, 0.215),black);
 }
