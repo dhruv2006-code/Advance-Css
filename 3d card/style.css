@@ -15,6 +15,19 @@ body{
     align-items: center;
     justify-content: center;
 }
+@property --rotate{
+    syntax:"<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes borderAnimate{
+    from{
+        --rotate : 0deg;
+    }
+    to{
+        --rotate: 360deg;
+    }
+}
 .card{
     height: 500px;
     background-color: rgba(70, 46, 46, 0.864);
@@ -22,6 +35,15 @@ body{
     padding: 21px;
     border-radius: 10px;
     box-shadow: 0px 0px 60px red;
+    /* border: 2px solid white; */
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.125)) padding-box,
+    conic-gradient(from var(--rotate),black,rgb(175, 16, 16),black) border-box;
+    animation: borderAnimate 10s infinite;
+    transition: scale 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card:hover{
+    scale: 0.80;
 }
 .card img{
     object-fit: cover;
