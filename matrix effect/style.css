@@ -12,17 +12,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-body{
-    anchor-name: --some-anchor;
+    gap: 30px;
 }
 .box{
     width: 200px;
     height: 200px;
     border-radius: 12px;
-}
-.box:hover{
-    anchor-name: --some-anchor;
+    transition: all 0.3s linear;
 }
 .red{
     background-color: red;
@@ -33,16 +29,9 @@ body{
 .green{
     background-color: green;
 }
-.anchor{
-    transition: all 0.3s linear;
-    background-color: rgb(240, 248, 255);
-    mix-blend-mode: difference;
-    border-radius: 12px;
-    pointer-events: none;
-    position: absolute;
-    top: anchor(top);
-    left: anchor(left);
-    right: anchor(right);
-    bottom: anchor(bottom);
-    position-anchor: --some-anchor;
+.box:hover{
+    transform: scale(1.2) !important;
+}
+body:has(.box:hover) .box{
+    transform: scale(0.8);
 }
