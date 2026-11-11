@@ -13,8 +13,36 @@ body{
     align-items: center;
     justify-content: center;
 }
-h1{
-    font-size: 3rem;
-    color: green;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body{
+    anchor-name: --some-anchor;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+}
+.box:hover{
+    anchor-name: --some-anchor;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.anchor{
+    transition: all 0.3s linear;
+    background-color: rgb(240, 248, 255);
+    mix-blend-mode: difference;
+    border-radius: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: anchor(top);
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+    position-anchor: --some-anchor;
 }
